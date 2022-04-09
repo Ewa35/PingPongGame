@@ -1153,6 +1153,21 @@ object Form1: TForm1
       1CED}
     Transparent = True
   end
+  object NewGame: TBitBtn
+    Left = 360
+    Top = 336
+    Width = 195
+    Height = 65
+    Caption = 'Nowa Gra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = NewGameClick
+  end
   object p1Up: TTimer
     Enabled = False
     Interval = 20

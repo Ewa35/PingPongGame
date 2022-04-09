@@ -13,6 +13,21 @@ int y=-8;
 int numberOfBouncesBall=0;
 int  rightSidePoints=0;
 int leftSidePoints=0;
+void play ()
+{
+        Form1->ball->Top= Form1->background->Height/2;  Form1->ball->Left= Form1->background->Width/2;
+        Form1->ball->Visible=true;
+       Form1-> whoWin->Visible=false;
+       Form1-> result->Visible=false;
+        Form1->numberBounces->Visible=false;
+        Form1->nextGame->Visible=false;
+        Form1->Button1->Visible=false;
+        numberOfBouncesBall=0;
+
+         x=-8; y=-8;
+        Form1->ballMovement->Interval=20;
+         Form1->ballMovement->Enabled=true;
+}
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -109,6 +124,25 @@ void __fastcall TForm1::ballMovementTimer(TObject *Sender)
 
 
        }
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::NewGameClick(TObject *Sender)
+{
+        if ( rightSidePoints!=0||   leftSidePoints!=0   ){
+
+     if (Application->MessageBox("Czy na pewno chcesz zaczπÊ od nowa?",
+        "Potwierdü", MB_YESNO | MB_ICONQUESTION)== IDYES)
+        {
+              rightSidePoints=0;
+              leftSidePoints=0;
+              play();
+         }       }
+     else
+     {
+      play();
+     }
 }
 //---------------------------------------------------------------------------
 
