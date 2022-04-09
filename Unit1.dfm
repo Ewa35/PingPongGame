@@ -1181,4 +1181,11 @@ object Form1: TForm1
     Left = 840
     Top = 32
   end
+  object ballMovement: TTimer
+    Enabled = False
+    Interval = 20
+    OnTimer = ballMovementTimer
+    Left = 408
+    Top = 40
+  end
 end

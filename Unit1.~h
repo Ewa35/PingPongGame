@@ -20,6 +20,7 @@ __published:	// IDE-managed Components
         TTimer *p1Down;
         TTimer *p2Up;
         TTimer *p2Down;
+        TImage *ball;
         void __fastcall FormKeyDown(TObject *Sender, WORD &Key,
           TShiftState Shift);
         void __fastcall FormKeyUp(TObject *Sender, WORD &Key,
