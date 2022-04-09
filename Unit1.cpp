@@ -13,6 +13,18 @@ int y=-8;
 int numberOfBouncesBall=0;
 int  rightSidePoints=0;
 int leftSidePoints=0;
+void displayResult()
+{
+ Form1->whoWin->Visible=true;
+ Form1->result->Caption=IntToStr(rightSidePoints) +":" +IntToStr(leftSidePoints);
+ Form1->numberBounces->Caption="Ilooa odbia: "+IntToStr(numberOfBouncesBall);
+ Form1->whoWin->Visible=true;
+ Form1->result->Visible=true;
+ Form1->numberBounces->Visible=true;
+ Form1->nextGame->Visible=true;
+ Form1->newGame->Visible=true;
+
+}
 void play ()
 {
         Form1->ball->Top= Form1->background->Height/2;  Form1->ball->Left= Form1->background->Width/2;
@@ -21,7 +33,7 @@ void play ()
        Form1-> result->Visible=false;
         Form1->numberBounces->Visible=false;
         Form1->nextGame->Visible=false;
-        Form1->Button1->Visible=false;
+        Form1->newGame->Visible=false;
         numberOfBouncesBall=0;
 
          x=-8; y=-8;
@@ -128,7 +140,7 @@ void __fastcall TForm1::ballMovementTimer(TObject *Sender)
 //---------------------------------------------------------------------------
 
 
-void __fastcall TForm1::NewGameClick(TObject *Sender)
+void __fastcall TForm1::newGameClick(TObject *Sender)
 {
         if ( rightSidePoints!=0||   leftSidePoints!=0   ){
 
@@ -143,6 +155,12 @@ void __fastcall TForm1::NewGameClick(TObject *Sender)
      {
       play();
      }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::nextGameClick(TObject *Sender)
+{
+           play();
 }
 //---------------------------------------------------------------------------
 

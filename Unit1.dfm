@@ -1153,7 +1153,7 @@ object Form1: TForm1
       1CED}
     Transparent = True
   end
-  object NewGame: TBitBtn
+  object newGame: TBitBtn
     Left = 360
     Top = 336
     Width = 195
@@ -1166,7 +1166,67 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    OnClick = NewGameClick
+    OnClick = newGameClick
+  end
+  object whoWin: TBitBtn
+    Left = 288
+    Top = 24
+    Width = 297
+    Height = 49
+    Caption = 'ZAGRAJMY W PING PONGA!'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object result: TBitBtn
+    Left = 360
+    Top = 88
+    Width = 147
+    Height = 41
+    Caption = 'result'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+  end
+  object numberBounces: TBitBtn
+    Left = 288
+    Top = 160
+    Width = 305
+    Height = 57
+    Caption = 'numberBounces'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    Visible = False
+  end
+  object nextGame: TBitBtn
+    Left = 360
+    Top = 248
+    Width = 201
+    Height = 73
+    Caption = 'Nast'#281'pna gra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clTeal
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    Visible = False
+    OnClick = nextGameClick
   end
   object p1Up: TTimer
     Enabled = False
@@ -1200,7 +1260,7 @@ object Form1: TForm1
     Enabled = False
     Interval = 20
     OnTimer = ballMovementTimer
-    Left = 408
-    Top = 40
+    Left = 248
+    Top = 24
   end
 end
