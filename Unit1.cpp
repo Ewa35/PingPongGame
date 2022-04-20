@@ -4,6 +4,7 @@
 #pragma hdrstop
 
 #include "Unit1.h"
+#include "Unit2.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -13,11 +14,12 @@ int y=-8;
 int numberOfBouncesBall=0;
 int  rightSidePoints=0;
 int leftSidePoints=0;
+
 void displayResult()
 {
  Form1->whoWin->Visible=true;
  Form1->result->Caption=IntToStr(rightSidePoints) +":" +IntToStr(leftSidePoints);
- Form1->numberBounces->Caption="Ilooa odbia: "+IntToStr(numberOfBouncesBall);
+ Form1->numberBounces->Caption="Iloœæ odbiæ: "+IntToStr(numberOfBouncesBall);
  Form1->whoWin->Visible=true;
  Form1->result->Visible=true;
  Form1->numberBounces->Visible=true;
@@ -44,6 +46,7 @@ void play ()
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
+
 }
 //---------------------------------------------------------------------------
 
@@ -91,7 +94,7 @@ void __fastcall TForm1::ballMovementTimer(TObject *Sender)
 {
            ball->Left+=x;
         ball->Top+=y;
-        p2->Left=background->Width-30;
+         p2->Left=background->Width-30;
         p1->Left=background->Left+10;
 
 
@@ -114,7 +117,7 @@ void __fastcall TForm1::ballMovementTimer(TObject *Sender)
        {
                if (x<0) x=-x;
                numberOfBouncesBall++;
-               ballMovement->Interval-=1;
+               if (ballMovement->Interval>=2) ballMovement->Interval-=1;
 
 
        }
@@ -132,7 +135,7 @@ void __fastcall TForm1::ballMovementTimer(TObject *Sender)
        {
                if (x>0) x=-x;
                numberOfBouncesBall++;
-               ballMovement->Interval-=1;
+               if (ballMovement->Interval>=2) ballMovement->Interval-=1;
 
 
        }
@@ -163,4 +166,5 @@ void __fastcall TForm1::nextGameClick(TObject *Sender)
            play();
 }
 //---------------------------------------------------------------------------
+
 
