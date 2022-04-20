@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 192
-  Top = 125
+  Left = 268
+  Top = 191
   Width = 928
   Height = 480
   Caption = 'Form1'
@@ -15,6 +15,9 @@ object Form1: TForm1
   OldCreateOrder = False
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
+  DesignSize = (
+    912
+    441)
   PixelsPerInch = 96
   TextHeight = 13
   object background: TShape
@@ -540,6 +543,7 @@ object Form1: TForm1
     Top = 168
     Width = 25
     Height = 210
+    Anchors = [akTop, akRight]
     AutoSize = True
     Picture.Data = {
       07544269746D61708E3E0000424D8E3E00000000000036000000280000001900
@@ -1154,16 +1158,18 @@ object Form1: TForm1
     Transparent = True
   end
   object newGame: TBitBtn
-    Left = 360
+    Left = 344
     Top = 336
     Width = 195
     Height = 65
+    BiDiMode = bdLeftToRight
     Caption = 'Nowa Gra'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentBiDiMode = False
     ParentFont = False
     TabOrder = 0
     OnClick = newGameClick
@@ -1173,12 +1179,14 @@ object Form1: TForm1
     Top = 24
     Width = 297
     Height = 49
+    BiDiMode = bdLeftToRight
     Caption = 'ZAGRAJMY W PING PONGA!'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentBiDiMode = False
     ParentFont = False
     TabOrder = 1
   end
@@ -1213,7 +1221,7 @@ object Form1: TForm1
     Visible = False
   end
   object nextGame: TBitBtn
-    Left = 360
+    Left = 344
     Top = 248
     Width = 201
     Height = 73
