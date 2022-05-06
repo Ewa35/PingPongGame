@@ -1,6 +1,6 @@
 object PingPong: TPingPong
-  Left = 192
-  Top = 125
+  Left = 246
+  Top = 256
   Width = 548
   Height = 388
   Caption = 'PingPong'

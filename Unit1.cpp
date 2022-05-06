@@ -38,7 +38,7 @@ void play ()
         Form1->newGame->Visible=false;
         numberOfBouncesBall=0;
 
-         x=-8; y=-8;
+         x=-x;
         Form1->ballMovement->Interval=20;
          Form1->ballMovement->Enabled=true;
 }
@@ -163,8 +163,10 @@ void __fastcall TForm1::newGameClick(TObject *Sender)
 
 void __fastcall TForm1::nextGameClick(TObject *Sender)
 {
-           play();
+
+        play();
 }
 //---------------------------------------------------------------------------
+
 
 
