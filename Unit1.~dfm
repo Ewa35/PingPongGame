@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 191
   Width = 928
   Height = 480
-  Caption = 'Form1'
+  Caption = 'PingPong'
   Color = clBtnFace
   UseDockManager = True
   DockSite = True
@@ -1158,10 +1158,11 @@ object Form1: TForm1
     Transparent = True
   end
   object newGame: TBitBtn
-    Left = 344
+    Left = 358
     Top = 336
     Width = 195
     Height = 65
+    Anchors = []
     BiDiMode = bdLeftToRight
     Caption = 'Nowa Gra'
     Font.Charset = DEFAULT_CHARSET
@@ -1175,10 +1176,11 @@ object Form1: TForm1
     OnClick = newGameClick
   end
   object whoWin: TBitBtn
-    Left = 288
+    Left = 307
     Top = 24
     Width = 297
     Height = 49
+    Anchors = []
     BiDiMode = bdLeftToRight
     Caption = 'ZAGRAJMY W PING PONGA!'
     Font.Charset = DEFAULT_CHARSET
@@ -1191,10 +1193,11 @@ object Form1: TForm1
     TabOrder = 1
   end
   object result: TBitBtn
-    Left = 360
+    Left = 382
     Top = 88
     Width = 147
     Height = 41
+    Anchors = []
     Caption = 'result'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -1206,10 +1209,11 @@ object Form1: TForm1
     Visible = False
   end
   object numberBounces: TBitBtn
-    Left = 288
+    Left = 303
     Top = 160
     Width = 305
     Height = 57
+    Anchors = []
     Caption = 'numberBounces'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -1221,10 +1225,11 @@ object Form1: TForm1
     Visible = False
   end
   object nextGame: TBitBtn
-    Left = 344
+    Left = 355
     Top = 248
     Width = 201
     Height = 73
+    Anchors = []
     Caption = 'Nast'#281'pna gra'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clTeal
