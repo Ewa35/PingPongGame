@@ -4,7 +4,7 @@
 #pragma hdrstop
 
 #include "Unit1.h"
-#include "Unit2.h"
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -46,7 +46,15 @@ void play ()
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
-
+       Application->MessageBox("   Witaj w grze Ping Pong!\n\n"
+       "Lewy gracz steruje klawiszami A oraz Z.\n"
+       "Prawy gracz steruje strza³kami do góry oraz w dó³.\n\n"
+       "Dla urozmaicenia zabawy: \n"
+       "Kiedy odbijesz pi³kê na œrodku paletki, zmienisz k¹t jej odbicia a pi³ka przyspieszy.\n"
+       "Im d³u¿ej odbijasz pi³kê, tym szybiej ona siê przemieszcza.\n"
+       "Mo¿esz dowolnie zmieniaæ pole gry.\n"
+       "Dobrej zabawy! :) \n" ,
+	"PingPong Game", MB_OK);
 }
 //---------------------------------------------------------------------------
 
@@ -163,9 +171,11 @@ void __fastcall TForm1::newGameClick(TObject *Sender)
 
 void __fastcall TForm1::nextGameClick(TObject *Sender)
 {
-           play();
+
+        play();
 }
 //---------------------------------------------------------------------------
+
 
 
 

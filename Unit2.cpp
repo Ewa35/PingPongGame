@@ -4,7 +4,7 @@
 #pragma hdrstop
 
 #include "Unit2.h"
-#include "Unit1.h"
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -16,10 +16,4 @@ __fastcall TPingPong::TPingPong(TComponent* Owner)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TPingPong::okClick(TObject *Sender)
-{
-        PingPong->Visible=false;
-        Form1->Visible=true; 
-}
-//---------------------------------------------------------------------------
 
